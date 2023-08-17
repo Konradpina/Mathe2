@@ -1,0 +1,44 @@
+
+.Contennt{
+    background-color: var(--lbcolor);
+    padding: 8% 5%;
+    border: black 3px solid;
+    border-radius: 5%;
+    justify-content: center;
+    text-align: center;
+    max-width: 100%;
+    
+}
+/* background-color: rgb(233, 238, 253); */
+
+.startbutton{
+    background-color: var(--mcolor);
+    border: 3px rgb(0, 0, 0) solid;
+    border-radius: 8px;
+    margin: 10%;
+    padding: 4% 14%;
+    font-size: 40px;
+    color:rgb(227, 233, 250);
+    transition: all 0.3s;
+}
+
+.startbutton:hover{
+    background-color: rgb(44, 193, 44);
+    color: aliceblue;
+}
+@media screen and (max-width:600px){
+   /* handy desing  */
+   .header{
+    font-size: 20px;
+    background-color: var(--mcolor);
+   }
+   .Contennt{
+    padding: 15% 10%;
+   }
+   .flex{
+    display: inline;
+   }
+   body{
+    margin-top: 20px;
+   }
+}

@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Mahteapp.com</title>
+        <link rel="stylesheet" href="style/header2.css">
+        <link rel="stylesheet" href="style/standert.css">
+        <link rel="stylesheet" href="style/keybord.css">
+        <link rel="stylesheet" href="style/task.css">
+        <link rel="stylesheet" href="style/paint.css">
+        <style>
+          
+            .frage{
+               
+               background-color: var(--lbcolor);
+               font-size: var(--bfs);
+               margin-bottom: 3%;
+            }
+            .qbox{
+                padding-top: 5%;
+                
+            
+            }
+            .nfrage{
+                color: var(--lscolor);
+                font-size: var(--fs);
+            }
+            
+        </style>
+
+        
+    </head>
+
+
+    <body>
+       
+     
+    
+
+
+        <!-- header -->
+
+        <header>
+            <div class="logo">Matheapp</div>
+            
+                <div class="fs" id="timedisplay" onclick="changetime()">Time</div>
+                <div class="fs" id="process">Progress</div>
+            
+            <div class="more">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <nav class="navbar" style="margin-top:10vh ;">
+                <ul>
+                    <li>
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li>
+                        <a href="" class="active">Quiz</a>
+                    </li>
+                    <li>
+                        <a href="language.html">Sprache</a>
+                    </li>
+                    <li>
+                        <a href="help.html">Help</a>
+                    </li>
+                    <li>
+                        <a href="imp.html">Impressum</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        
+         
+
+        <!-- quiz -->
+        <div class="taskbox">
+            <div class="task1 taskc" ><div class="tasktext">Aufgabe1</div></div>
+            <div class="task2 taskc" ><div class="tasktext">Aufgabe2</div></div>
+            <div class="task3 taskc" ><div class="tasktext">Aufgabe3</div></div>
+            <div class="task2 rbtn " onclick="rotate()"></div>
+        </div>
+
+       
+
+
+        <!-- koregierung -->
+        <div class="qbox" id="correctionbox" hidden>
+            <div>
+                <div class="flex">
+                    <div class="flex1"></div>
+                    <div id="cquestion" class="frage fsb">Frage</div>
+                    <div id="cansawer" class="frage fsb"></div>
+                    <div class="flex1"></div>
+                </div>
+                
+                <div id="cnextquestion" class="nfrage fs" >Näschste Frage</div>
+            </div>
+        
+        </div>
+
+           <!-- Input -->
+           <canvas id="myCanvas"></canvas>
+           <div id="saveArea">
+               <img id="canvasImg" />
+               <h2>Right Click to Save...</h2>
+               <button id="btnBack">Back</button>
+           </div>
+           <div id="tools">
+               <table>
+               <tr>
+               <td><label for="colorChange">Color</label><input
+               type="color" id="colorChange"/></td>
+               <td><label for="lineWidth">Width: </label><input
+               type="range" id="lineWidth" min="1" max="10" step="1"/></td>
+               <td><button id="btnSave">Save</button><button
+               id="btnClear">Clear</button></td>
+               </tr>
+               </table>
+           </div>
+
+       
+    </body>
+
+    <script>
+        var more=document.querySelector(".more")
+        more.onclick =function(){
+            var navbar= document.querySelector(".navbar")
+            navbar.classList.toggle("active")
+        }
+    </script>
+    <script src="quiz.js"></script>
+    <script src="timer.js"></script>
+    <script src="task.js"></script>
+    <script src="paint.js"></script>
+    <script src="header.js"></script>
+</html>

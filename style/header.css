@@ -1,0 +1,120 @@
+:root{
+    --hcolor:rgb(21, 22, 79);
+    --hfcolor:rgb(255, 255, 255);
+    --h2color:var(--hcolor)
+}
+
+.n{
+    
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(215, 248, 250);
+    margin: 0;
+    padding: 0;
+    
+}
+header{
+    width: 100%;
+    height: 80px;
+    background-color: var(--hcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 100px;
+    
+}
+.logo{
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--hfcolor);
+    
+}
+.hambuger{
+    display: none;
+}
+.Navigationbar ul{
+    display: flex;
+    list-style: none;
+}
+.Navigationbar ul li a{
+    display: block;
+    color: var(--hfcolor);
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin: 0 5px;
+    text-decoration: none;
+  
+
+}
+.Navigationbar.active ul{
+    opacity: 1;
+}
+.Navigationbar.active{
+    height: 270px;
+}
+.Navigationbar ul li a:hover{
+    color: var(--hcolor) ;
+    background-color: var(--hfcolor);
+}
+.Navigationbar ul li a.active{
+    color: var(--hcolor) ;
+    background-color: var(--hfcolor);
+}
+
+
+@media only screen and (max-width:1320px){
+    header{
+        padding: 0 50px;
+    }
+}
+@media only screen and (max-width:1100px){
+    header{
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width:1100px){
+    header{
+        padding: 0 20px;
+    }
+}
+@media only screen and (max-width:800px){
+        .hambuger{
+            display: block;
+            cursor: pointer;
+        }
+        .hambuger .line{
+            width: 30px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: var(--hfcolor);
+            margin: 6px 0;
+        }
+        .Navigationbar{
+            position: absolute;
+            height: 0;
+            top: 80px;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            background-color: var(--h2color);
+            transition: 0.2s;
+            overflow: hidden;
+        }
+        .Navigationbar ul{
+            display: block;
+            width: fit-content;
+            align-items: center;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            transition: 0.5s;
+            opacity: 0;
+        }
+        .Navigationbar ul li a{
+            margin-bottom: 4px;
+        }
+    
+}

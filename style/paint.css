@@ -1,0 +1,24 @@
+body{
+    /* margin: 0px; */
+    font-family: Arial, sans-serif;
+}
+#myCanvas{
+    overflow: hidden;
+    background-color: #ffffff;
+    border-bottom: 1px solid black;
+    height: 95%;
+    /* width: 100%; */
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; */
+}
+
+table{
+    width: 100%;
+}
+
+#canvasImg{
+    width: 75%;
+    height: 75%;
+}

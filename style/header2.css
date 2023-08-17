@@ -1,0 +1,164 @@
+
+:root{
+    --hcolor:rgb(21, 22, 79);
+     --hfcolor:rgb(255, 255, 255);
+    --h2color:var(--hcolor);
+
+    --hheight:70px;
+}
+body{
+    margin: 0;
+    padding: 0;
+  
+}
+
+header{
+    background-color: var(--hcolor) ;
+    color: var(--hfcolor);
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box ;
+    padding: 0 1%;
+    align-items: center;
+    height:var(--hheight) ;
+}
+.logo{
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--hfcolor);
+}
+.more{
+    height: 30px
+}
+.more .line{
+    height: 4px;
+    width: 30px;
+    background-color: var(--hfcolor);
+    margin: 6px;
+    border-radius: 2px;
+}
+.navbar{
+border-top: 1px rgb(8, 9, 38) solid;   
+
+overflow: hidden;
+position: absolute;
+top:var(--hheight);   
+left: 0;
+right: 0;
+height: 0;
+background-color: var(--h2color);
+height: 0;
+transition: all 0.2s;
+
+ 
+}
+.navbar ul{
+    
+    opacity: 0;
+    transition: all 0.5s;
+    margin: 0;
+    margin-top: 6px;
+}
+.navbar.active ul{
+    
+    opacity: 1;
+}
+.navbar.active{
+    height: 70px;
+}
+.navbar ul{
+    
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.navbar ul li a{
+    background-color: var(--hcolor);
+    color: var(--hfcolor);
+    display: block;
+    padding: 10px 40px 10px 40px;
+    margin: 1%;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 25px;
+    transition: all 0.2s;
+    text-decoration: none;
+    transition: all 0.3s;
+    margin: 5px 0 5px 0;
+
+}
+.navbar ul li a:hover{
+    background-color: var(--hfcolor);
+    color: var(--hcolor);
+}
+.navbar ul li a.active{
+    background-color: var(--hfcolor);
+    color: var(--hcolor);
+}
+
+@media only screen and (max-width:1000px){
+    header{
+        padding: 0 3%;
+    }
+    .navbar ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        
+    }
+    .navbar.active{
+        height: 188px;
+  
+    } 
+    .navbar ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media only screen and (max-width:750px){
+    header{
+        padding: 0 5%;
+    } 
+    .navbar ul {
+        display: inline;
+        align-items: center;
+        
+    }
+    .navbar.active{
+        height: 432px;
+  
+    } 
+}
+@media only screen and (max-aspect-ratio:16/24){
+    body{
+        
+        background-color: rgb(221, 249, 255);
+    }
+    .navbar ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+        
+    }
+    
+    .navbar ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navbar ul {
+        display: inline;
+        align-items: center;
+        
+    }
+}
+@media only screen and (min-aspect-ratio:24/18){
+    body{
+
+        background-color: rgb(245, 228, 255);
+    }
+    
+}

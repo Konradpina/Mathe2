@@ -1,0 +1,99 @@
+:root{
+    --headerh:var(--hheight);
+    --taskboxh:10vh;
+    --taskfc:rgb(255, 255, 255);
+    --tasknc:rgb(51, 91, 211);
+}
+body{
+    overflow: hidden;
+}
+
+.taskbox{
+    
+    height:var(--taskboxh);
+    overflow:a;
+    font-size: 40px;
+    
+    
+}
+.taskc{
+    border: 2px black solid;
+}
+
+.task1{
+    position: absolute;
+    width: 50vw;
+    top: var(--headerh);
+    left: 0vw;
+    height:var(--taskboxh);
+    background-color: var(--taskfc);
+    
+
+    animation: focus 2s 1 alternate;
+}
+.task2{
+    position: absolute;
+    width: 50vw;
+    top: var(--headerh);
+    left: 50vw;
+    
+    height:var(--taskboxh);
+    animation: in 2s 1 alternate;
+    background-color: var(--tasknc);
+}
+.task3{
+    position: absolute;
+    width: 50vw;
+    top: var(--headerh);
+    left: 100vw;
+    height:var(--taskboxh);
+    animation: out 2s 1 alternate;
+    background-color: var(--taskfc);
+
+}
+.tasktext{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    height:var(--taskboxh);
+}
+.rbtn{
+    opacity: 0;
+}
+
+@keyframes out {
+    0%{
+        left: 0vw;
+    }
+    40%{
+        left: -50vw;
+        opacity: 1;
+    }
+    41%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes focus {
+    0%{
+        left: 50vw;
+        background-color: var(--tasknc);
+    }
+    40%{
+        left: 0vw;
+        
+    }
+    to{
+        background-color: var(--taskfc);
+    }
+}
+@keyframes in {
+    0%{
+        left: 100vw;
+    }
+    40%{
+        left: 50vw;
+    }
+}
